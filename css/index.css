@@ -21,6 +21,7 @@ body {
   font-size: 10px;
   height: 100%;
   cursor: url("../img/mouse_body.png"), auto;
+  touch-action: none;
 }
 
 ul,
@@ -152,6 +153,9 @@ canvas {
     width: 172ch;
   }
 }
+#wrap .wrapper .section_2 {
+  position: relative;
+}
 #wrap .wrapper .section_3 {
   position: relative;
 }
@@ -160,27 +164,29 @@ canvas {
   height: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
+  margin-top: 0;
 }
 #wrap .wrapper .section_3 .swiper .swiper-wrapper {
-  top: 30%;
+  top: 20%;
 }
 #wrap .wrapper .section_3 .swiper .swiper-wrapper .swiper-slide {
+  animation: motion 0.7s linear 0s infinite alternate;
   background-position: center;
   background-size: cover;
-  width: 50rem;
-  height: 35rem;
+  width: 45rem;
+  height: 50rem;
 }
-#wrap .wrapper .section_3 .swiper .swiper-wrapper .swiper-slide .fisrt_text {
+#wrap .wrapper .section_3 .swiper .swiper-wrapper .swiper-slide .slide_text .fisrt_text {
   margin-top: 2rem;
   font-size: 4rem;
   color: #fff;
 }
-#wrap .wrapper .section_3 .swiper .swiper-wrapper .swiper-slide .second_text {
+#wrap .wrapper .section_3 .swiper .swiper-wrapper .swiper-slide .slide_text .second_text {
   margin-top: 1.5rem;
   font-size: 3rem;
   color: #fff;
 }
-#wrap .wrapper .section_3 .swiper .swiper-wrapper .swiper-slide .login-box a {
+#wrap .wrapper .section_3 .swiper .swiper-wrapper .swiper-slide .slide_text .login-box a {
   position: relative;
   display: inline-block;
   padding: 10px 20px;
@@ -193,23 +199,31 @@ canvas {
   margin-top: 40px;
   letter-spacing: 4px;
 }
-#wrap .wrapper .section_3 .swiper .swiper-wrapper .swiper-slide .login-box a:hover {
+#wrap .wrapper .section_3 .swiper .swiper-wrapper .swiper-slide .slide_text .login-box a:hover {
   background: #03e9f4;
   color: #fff;
   border-radius: 5px;
   box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
 }
-#wrap .wrapper .section_3 .swiper .swiper-wrapper .swiper-slide .login-box a span {
+#wrap .wrapper .section_3 .swiper .swiper-wrapper .swiper-slide .slide_text .login-box a span {
   position: absolute;
   display: block;
 }
-#wrap .wrapper .section_3 .swiper .swiper-wrapper .swiper-slide .login-box a span:nth-child(1) {
+#wrap .wrapper .section_3 .swiper .swiper-wrapper .swiper-slide .slide_text .login-box a span:nth-child(1) {
   top: 0;
   left: -100%;
   width: 100%;
   height: 2px;
   background: linear-gradient(90deg, transparent, #03e9f4);
   animation: btn-anim1 1s linear infinite;
+}
+@keyframes motion {
+  0% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: 10px;
+  }
 }
 @keyframes btn-anim1 {
   0% {
@@ -219,7 +233,7 @@ canvas {
     left: 100%;
   }
 }
-#wrap .wrapper .section_3 .swiper .swiper-wrapper .swiper-slide .login-box a span:nth-child(2) {
+#wrap .wrapper .section_3 .swiper .swiper-wrapper .swiper-slide .slide_text .login-box a span:nth-child(2) {
   top: -100%;
   right: 0;
   width: 2px;
@@ -236,7 +250,7 @@ canvas {
     top: 100%;
   }
 }
-#wrap .wrapper .section_3 .swiper .swiper-wrapper .swiper-slide .login-box a span:nth-child(3) {
+#wrap .wrapper .section_3 .swiper .swiper-wrapper .swiper-slide .slide_text .login-box a span:nth-child(3) {
   bottom: 0;
   right: -100%;
   width: 100%;
@@ -253,7 +267,7 @@ canvas {
     right: 100%;
   }
 }
-#wrap .wrapper .section_3 .swiper .swiper-wrapper .swiper-slide .login-box a span:nth-child(4) {
+#wrap .wrapper .section_3 .swiper .swiper-wrapper .swiper-slide .slide_text .login-box a span:nth-child(4) {
   bottom: -100%;
   left: 0;
   width: 2px;
@@ -273,7 +287,6 @@ canvas {
 #wrap .wrapper .section_3 .swiper .swiper-wrapper .swiper-slide img {
   display: block;
   width: 100%;
-  height: 100%;
 }
 
 .container a {
@@ -326,8 +339,8 @@ canvas {
 
 .screen {
   display: block;
-  width: 50rem;
-  height: 35rem;
+  width: 45rem;
+  height: 50rem;
   overflow: hidden;
   position: relative;
   border: 2px solid #b3b3b3;
@@ -335,18 +348,130 @@ canvas {
   margin: 0 auto;
 }
 
-.screen img {
-  bottom: -1210px;
+.slide_img1 {
+  bottom: -530px;
   width: 100%;
   height: auto;
   position: absolute;
   z-index: 0;
   margin: 0;
   padding: 0;
-  transition: bottom 5s;
+  transition: bottom 8s;
+}
+
+.slide_img2 {
+  bottom: -852px;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  z-index: 0;
+  margin: 0;
+  padding: 0;
+  transition: bottom 8s;
+}
+
+.slide_img3 {
+  bottom: -1738px;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  z-index: 0;
+  margin: 0;
+  padding: 0;
+  transition: bottom 8s;
+}
+
+.slide_img4 {
+  bottom: -1177px;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  z-index: 0;
+  margin: 0;
+  padding: 0;
+  transition: bottom 8s;
+}
+
+.slide_img5 {
+  bottom: -665px;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  z-index: 0;
+  margin: 0;
+  padding: 0;
+  transition: bottom 8s;
 }
 
 .screen:hover img {
   bottom: 0;
-  transition: all 5s;
+  transition: all 8s;
+}
+
+#drag-container, #spin-container {
+  position: relative;
+  display: flex;
+  margin: auto;
+  transform-style: preserve-3d;
+  transform: rotateX(-10deg);
+}
+
+#drag-container img, #drag-container video {
+  transform-style: preserve-3d;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  line-height: 200px;
+  font-size: 50px;
+  text-align: center;
+  box-shadow: 0 0 8px #fff;
+  -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.3333333333));
+}
+
+#drag-container img:hover, #drag-container video:hover {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.8666666667);
+  -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.4666666667));
+}
+
+#drag-container p {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateX(90deg);
+  color: #fff;
+}
+
+#ground {
+  width: 900px;
+  height: 900px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateX(90deg);
+  background: -webkit-radial-gradient(center center, farthest-side, rgba(153, 153, 153, 0.2), transparent);
+}
+
+#music-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+@keyframes spin {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+@keyframes spinRevert {
+  from {
+    transform: rotateY(360deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
 }
