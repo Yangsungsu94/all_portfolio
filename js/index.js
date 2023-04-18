@@ -24,8 +24,13 @@ var swiper = new Swiper(".mySwiper", {
 $(function(){
   $(".swiper-slide").hover(function(){    
     $(this).css("animation-play-state","paused").siblings().css("animation","motion 0.7s linear 0s infinite alternate");
+    $(this).find(".slide_img_hover").css("opacity","0");
+    $(this).find(".slide_img_hover_p").css("display","none");
+
   },function(){
     $(this).css("animation","motion 0.7s linear 0s infinite alternate");
+    $(this).find(".slide_img_hover").css("opacity","0.5");
+    $(this).find(".slide_img_hover_p").css("display","block");
   })
 })
 
