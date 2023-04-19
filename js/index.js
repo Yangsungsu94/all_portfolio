@@ -29,7 +29,7 @@ $(function(){
 
   },function(){
     $(this).css("animation","motion 0.7s linear 0s infinite alternate");
-    $(this).find(".slide_img_hover").css("opacity","0.5");
+    $(this).find(".slide_img_hover").css("opacity","0.9");
     $(this).find(".slide_img_hover_p").css("display","block");
   })
 })
