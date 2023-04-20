@@ -195,6 +195,7 @@ canvas {
         display: flex;
         align-items: center;
         justify-content: center;
+
         .profile_img {
           width: 30rem;
           height: 40rem;
@@ -203,15 +204,20 @@ canvas {
 
         .info_list {
           width: 60rem;
-          margin-left:10rem;
+          margin-left: 10rem;
 
-         
-          h1{
-            color:#fff;
-            font-size: 6.5rem;         
-          }
+          .info_opening {
+            margin-bottom: 5rem;
+
+            h1 {
+              color: #fff;
+              font-size: 6.5rem;
+            }
+          }         
+
           .info_list_inner {
-            width:100%;
+            width: 100%;
+            transition: all 0.8s ease;
 
             li {
               padding: 2rem 0;
@@ -223,6 +229,59 @@ canvas {
           }
         }
 
+        .popup {
+          text-align: center;
+          height: auto;
+          padding: 1rem;
+          border: 3px solid #25375c;
+          background-color: #f0e8db;
+          position: absolute;
+          z-index: 10;
+          opacity: 0;            
+          cursor: default;
+          pointer-events: none;          
+
+          h2 {
+              font-size: 3rem;
+              text-align: center;
+              margin: 1rem 0;
+            }
+
+            p{
+              font-size: 1.8rem;
+              padding: 0 1rem;
+              line-height: 2.6rem;    
+             
+              
+              span{
+                font-size:1.8rem;
+                float:right;  
+              }
+            }
+        }
+
+        .about{
+          width:35rem;
+        }
+
+        .education{
+          width:35rem;
+        }
+
+        .technical{
+          width:50rem;
+        }
+
+        .contact{
+          width:50rem;
+
+          p{
+            a{
+              color:#000 !important;
+              font-size:1.8rem;
+            }
+          }
+        }
       }
     }
 
@@ -608,6 +667,7 @@ canvas {
   -webkit-transform: translate(-50%, -50%) rotateX(90deg);
   transform: translate(-50%, -50%) rotateX(90deg);
   color: #fff;
+  text-align: center;
 }
 
 #ground {
@@ -686,6 +746,11 @@ canvas {
   z-index: 2000;
   background-color: rgba(255, 255, 255, 0.9);
 }
+
+
+
+
+
 
 
 

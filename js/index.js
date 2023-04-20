@@ -1,36 +1,36 @@
 // swiper
 var swiper = new Swiper(".mySwiper", {
-    effect: "coverflow",
-    grabCursor: true,
-    centeredSlides: true,
-    slidesPerView: "auto",
-    coverflowEffect: {
-      rotate: 50,
-      stretch: 0,
-      depth: 100,
-      modifier: 1,
-      slideShadows: true,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-    },
-  });
+  effect: "coverflow",
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: "auto",
+  coverflowEffect: {
+    rotate: 50,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: true,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+  },
+});
 //end
 
 // ainmation up down
 
 // img rotate
 
-$(function(){
-  $(".swiper-slide").hover(function(){    
-    $(this).css("animation-play-state","paused").siblings().css("animation","motion 0.7s linear 0s infinite alternate");
-    $(this).find(".slide_img_hover").css("opacity","0");
-    $(this).find(".slide_img_hover_p").css("display","none");
+$(function () {
+  $(".swiper-slide").hover(function () {
+    $(this).css("animation-play-state", "paused").siblings().css("animation", "motion 0.7s linear 0s infinite alternate");
+    $(this).find(".slide_img_hover").css("opacity", "0");
+    $(this).find(".slide_img_hover_p").css("display", "none");
 
-  },function(){
-    $(this).css("animation","motion 0.7s linear 0s infinite alternate");
-    $(this).find(".slide_img_hover").css("opacity","0.9");
-    $(this).find(".slide_img_hover_p").css("display","block");
+  }, function () {
+    $(this).css("animation", "motion 0.7s linear 0s infinite alternate");
+    $(this).find(".slide_img_hover").css("opacity", "0.9");
+    $(this).find(".slide_img_hover_p").css("display", "block");
   })
 })
 
@@ -82,21 +82,21 @@ function init(delayTime) {
 
 function applyTranform(obj) {
   // Constrain the angle of camera (between 0 and 180)
-  if(tY > 180) tY = 180;
-  if(tY < 0) tY = 0;
+  if (tY > 180) tY = 180;
+  if (tY < 0) tY = 0;
 
   // Apply the angle
   obj.style.transform = "rotateX(" + (-tY) + "deg) rotateY(" + (tX) + "deg)";
 }
 
 function playSpin(yes) {
-  ospin.style.animationPlayState = (yes?'running':'paused');
+  ospin.style.animationPlayState = (yes ? 'running' : 'paused');
 }
 
 var sX, sY, nX, nY, desX = 0,
-    desY = 0,
-    tX = 0,
-    tY = 10;
+  desY = 0,
+  tX = 0,
+  tY = 10;
 
 // auto spin
 if (autoRotate) {
@@ -107,7 +107,7 @@ if (autoRotate) {
 // add background music
 if (bgMusicURL) {
   document.getElementById('music-container').innerHTML += `
-<audio src="${bgMusicURL}" ${bgMusicControls? 'controls': ''} autoplay loop>    
+<audio src="${bgMusicURL}" ${bgMusicControls ? 'controls' : ''} autoplay loop>    
 <p>If you are reading this, it is because your browser does not support the audio element.</p>
 </audio>
 `;
@@ -118,12 +118,12 @@ document.onpointerdown = function (e) {
   clearInterval(odrag.timer);
   e = e || window.event;
   var sX = e.clientX,
-      sY = e.clientY;
+    sY = e.clientY;
 
   this.onpointermove = function (e) {
     e = e || window.event;
     var nX = e.clientX,
-        nY = e.clientY;
+      nY = e.clientY;
     desX = nX - sX;
     desY = nY - sY;
     tX += desX * 0.1;
@@ -152,7 +152,7 @@ document.onpointerdown = function (e) {
   return false;
 };
 
-document.onmousewheel = function(e) {
+document.onmousewheel = function (e) {
   e = e || window.event;
   var d = e.wheelDelta / 20 || -e.detail;
   radius += d;
@@ -161,4 +161,37 @@ document.onmousewheel = function(e) {
 
 // end
 
+// drag mouse event
+$(".info_list_inner li").hover(function () {
+
+  $(".info_list_inner li").mousemove(function (event) {
+
+    var liIdx = $(this).index();
+    $(".popup").eq(liIdx).css("opacity", 1);
+
+    var headerWidth = $("header").width();
+    var popupWidth = $(".popup").eq(liIdx).width();
+    var popupHeight = $(".popup").eq(liIdx).height();
+
+    $(".popup").css("top", event.clientY - popupHeight - 50);
+    $(".popup").css("left", event.clientX - headerWidth - popupWidth - 70);
+
+    if ($(".info_list_inner").css("opacity") < 1) {
+      $(".popup").css("opacity", 0);
+    }
+  });
+
+}, function () {
+  var liIdx = $(this).index();
+  $(".popup").eq(liIdx).stop().css("opacity", 0);
+});
+
+// popup이 마우스를 따라 이동하는 효과
+document.addEventListener("mousemove", e => {
+  gsap.to(".popup", {
+      x: e.clientX -700,
+      y: e.clientY -400
+  })
+})
+//end
 
