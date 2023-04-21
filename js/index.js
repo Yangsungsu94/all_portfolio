@@ -189,7 +189,7 @@ $(".info_list_inner li").hover(function () {
 // popup이 마우스를 따라 이동하는 효과
 document.addEventListener("mousemove", e => {
   gsap.to(".popup", {
-      x: e.clientX -700,
+      x: e.clientX -1150,
       y: e.clientY -400
   })
 })

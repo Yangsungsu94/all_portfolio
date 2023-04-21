@@ -215,10 +215,10 @@ canvas {
   float: right;
 }
 #wrap .wrapper .section_2 .section_2_inner .about {
-  width: 35rem;
+  width: 40rem;
 }
 #wrap .wrapper .section_2 .section_2_inner .education {
-  width: 35rem;
+  width: 40rem;
 }
 #wrap .wrapper .section_2 .section_2_inner .technical {
   width: 50rem;
@@ -361,6 +361,11 @@ canvas {
 #wrap .wrapper .section_4 .swiper .swiper-wrapper .swiper-slide img {
   display: block;
   width: 100%;
+}
+#wrap .wrapper .section_5 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .container a {
@@ -523,6 +528,7 @@ canvas {
   transform: translate(-50%, -50%) rotateX(90deg);
   color: #fff;
   text-align: center;
+  font-size: 2rem;
 }
 
 #ground {

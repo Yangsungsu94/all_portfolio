@@ -57,14 +57,14 @@
                     <div class="profile_img">
                         <!-- <img src="" alt=""> -->
                     </div>
-                    
+
 
                     <div class="info_list">
                         <div class="info_opening">
                             <h1>HELLO?</h1>
                             <h1>MY PROFILE!</h1>
                         </div>
-                        
+
                         <ul class="info_list_inner">
                             <li>ABOUT ME</li>
                             <li>EDUCATION</li>
@@ -76,20 +76,18 @@
                     <div class="popup about">
                         <h2>ABOUT ME</h2>
                         <p>NAME : 양성수(Yang Sung Su)</p>
-                        <p>AGE : 30</p>
                         <p>Birth : 1994.08.26</p>
                         <p>Address : 시흥시</p>
-
                     </div>
 
                     <div class="popup education">
                         <h2>EDUCATION</h2>
                         <p>연성대학교 사회복지과 입학 <span>2013</span></p>
                         <p>15사단 입대<span>2015</span></p>
-                        <p>15사단 전역<span>2016</span></p>                       
+                        <p>전 역<span>2016</span></p>
                         <p>연성대학교 졸업<span>2018</span></p>
                         <p>MCT(머시닝센터)<span>2022</span></p>
-                        <p>라인컴퓨터 아트 학원<span>2022</span></p>
+                        <p>라인 컴퓨터 아트 학원<span>2022</span></p>
                     </div>
 
                     <!-- <div class="popup technical">
@@ -350,19 +348,65 @@
             </section>
 
             <section class="section section_5">
-                About
+                <div class="section_5_inner">
+                    <div class='cards'>
+                        <div class='card' data-card>
+                            <div class='card__inner'>
+                                <div class='card__image'>
+                                    <img src='https://xl.movieposterdb.com/07_12/2006/414993/xl_414993_0cbd42ba.jpg'
+                                        alt='The Fountain' />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class='card' data-card>
+                            <div class='card__inner'>
+                                <div class='card__image'>
+                                    <img src='https://xl.movieposterdb.com/20_06/2017/5109784/xl_5109784_051e160f.jpg'
+                                        alt='Mother!' />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class='card' data-card>
+                            <div class='card__inner'>
+                                <div class='card__image'>
+                                    <img src='https://xl.movieposterdb.com/10_09/2010/947798/xl_947798_f9a08ddf.jpg'
+                                        alt='Black Swan' />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='content'>
+                        <div class='content__group'>
+                            <p class='content__heading'>The Fountain</p>
+                            <p class='content__category'>Science Fiction</p>
+                            <p class='content__description'>
+                                Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec sed odio dui.
+                            </p>
+                        </div>
+
+                        <div class='content__group'>
+                            <p class='content__heading'>Mother!</p>
+                            <p class='content__category'>Horror</p>
+                            <p class='content__description'>
+                                Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec sed odio dui.
+                            </p>
+                        </div>
+
+                        <div class='content__group'>
+                            <p class='content__heading'>Black Swan</p>
+                            <p class='content__category'>Psychological Thriller</p>
+                            <p class='content__description'>
+                                Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec sed odio dui.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </section>
-
-            <!-- <section class="section section_5">
-                Block5
-            </section> -->
-
         </div>
     </div>
-
-
-
-
 
     <!-- 배경 파티클 -->
     <script>
@@ -575,6 +619,64 @@
             pagination: {
                 el: ".swiper-pagination",
             },
+        });
+    </script>
+
+    <script>
+        gsap.registerPlugin(Flip);
+
+        // Variables
+        const activeClass = "is-active";
+        const cards = document.querySelectorAll("[data-card]");
+
+        const updateCard = (card, idx, active) => {
+            const cardInner = card.querySelector(".card__inner");
+            const image = card.querySelector(".card__image");
+
+            // Bail out if we're in the middle of a flip
+            if (Flip.isFlipping(cardInner)) return;
+
+            const cardState = Flip.getState(cardInner, {
+                props: "box-shadow, border-radius"
+            });
+            const imageState = Flip.getState(image);
+            card.classList.toggle(activeClass, active);
+
+            const duration = active ? 0.7 : 0.5;
+            const ease = "quint.out";
+
+            const cardContent = document.querySelectorAll(".content__group")[idx];
+            gsap.killTweensOf(cardContent);
+            gsap.to(cardContent, {
+                duration: active ? 1 : 0.2,
+                ease: "expo.out",
+                stagger: 0.1,
+                alpha: active ? 1 : 0,
+                y: active ? 0 : 20,
+                delay: active ? 0.4 : 0
+            });
+
+            Flip.from(cardState, {
+                duration: duration,
+                ease: ease,
+                absolute: true,
+                zIndex: 1
+            });
+
+            Flip.from(imageState, {
+                duration: duration,
+                absolute: true,
+                ease: ease,
+                simple: true
+            });
+        };
+
+        // Init
+        cards.forEach((card, idx) => {
+            updateCard(card, idx, false);
+            card.addEventListener("click", (evt) => {
+                updateCard(card, idx, !card.classList.contains(activeClass));
+            });
         });
 
     </script>
