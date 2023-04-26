@@ -114,14 +114,7 @@ if (autoRotate) {
   ospin.style.animation = `${animationName} ${Math.abs(rotateSpeed)}s infinite linear`;
 }
 
-// add background music
-if (bgMusicURL) {
-  document.getElementById('music-container').innerHTML += `
-<audio src="${bgMusicURL}" ${bgMusicControls ? 'controls' : ''} autoplay loop>    
-<p>If you are reading this, it is because your browser does not support the audio element.</p>
-</audio>
-`;
-}
+
 
 // setup events
 document.onpointerdown = function (e) {
@@ -205,40 +198,6 @@ document.addEventListener("mousemove", e => {
 })
 //end
 
-// card
-// gsap.registerPlugin(Flip);
-
-// const activeClass = "is-active";
-// const inactiveClass = "is-inactive";
-// const cards = document.querySelectorAll(".card");
-
-// cards.forEach((card, idx) => {
-//   card.addEventListener("click", () => {
-//     const state = Flip.getState(cards);
-//     const isCardActive = card.classList.contains(activeClass);
-
-//     cards.forEach((otherCard, otherIdx) => {
-//       otherCard.classList.remove(activeClass);
-//       otherCard.classList.remove(inactiveClass);
-//       if (!isCardActive && idx !== otherIdx)
-//         otherCard.classList.add(inactiveClass);
-//     });
-
-//     if (!isCardActive) {
-//       card.classList.add(activeClass);
-//     }
-
-//     Flip.from(state, {
-//       duration: 1,
-//       ease: "expo.out",
-//       absolute: true
-//     });
-//   });
-// });
-
-// end
-
-
 // 내가 원하던거
 gsap.registerPlugin(Flip);
 
@@ -297,3 +256,13 @@ cards.forEach((card, idx) => {
 });
 
 // end
+
+// img hover
+
+
+
+// end
+
+
+
+
