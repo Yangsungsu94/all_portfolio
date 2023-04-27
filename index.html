@@ -5,434 +5,360 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>양성수 포트폴리오</title>
-
+    <title>양성수's PORTFOLIO</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!-- 파티클 -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- 섹션이동 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <!-- 프로젝트 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <script src='https://unpkg.co/gsap@3/dist/gsap.min.js'></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NC2RL6BN5Z"></script>
+    <!-- 내꺼 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
     <script src="https://assets.codepen.io/16327/Flip.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://kit.fontawesome.com/2100586b6b.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://assets.codepen.io/16327/Flip.min.js"></script>
 
-
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,400i,700">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,400i,700">
+    <!-- end -->
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-NC2RL6BN5Z');
+    </script>
 </head>
 
-<body style="overflow-x: hidden;">
-    <div id="particles-js"></div>
+<body>
+    <!-- 프로젝트 -->
+    <div class="header container2 highlightTextIn highlightTextOut">
+        <a class="link" href="#section_1" alt="HOME">HOME</a>
+        <a class="link" href="#section_5" alt="PORTFOLIO">PORTFOLIO</a>
+        <a class="link" href="#section_3" alt="SKILL">SKILL</a>
+        <a class="link" href="#section_2" alt="PROFILE">PROFILE</a>
+    </div>
 
-    <div id="wrap">
+    <div class="swiper mySwiper">
+        <!-- 파티클 -->
+        <div id="particles-js"></div>
 
-        <div class="wrapper">
+        <div class="swiper-wrapper">
 
-            <section class="section section_1">
+            <div class="swiper-slide" id="section_1">
 
-                <div class="header container highlightTextIn highlightTextOut">
-                    <a class="link" alt="HOME">HOME</a>
-                    <a class="link" alt="PROFILE">PROFILE</a>
-                    <a class="link" alt="SKILL">SKILL</a>
-                    <a class="link" alt="PORTFOLIO">PORTFOLIO</a>
-                </div>
+                <section class="section section_1">
 
-                <div class="content_typewriter">
-                    <div class="typewriter">
-                        <p>Welcome To My PortFolio</p>
-                    </div>
-
-                    <div class="typewriter_text">
-                        <p class="typewriter_p">Yang Sung Su</p>
-
-                        <div class="login-box">
-                            <a href="https://yangsungsu94.github.io/project_1/" target="_blank">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                My Git
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section section_2">
-
-                <div class="section_2_inner">
-
-                    <div class="profile_img">
-                        <img src="img/profile.png" alt="profile">
-                    </div>
-
-
-                    <div class="info_list">
-                        <div class="info_opening">
-                            <h1>HELLO?</h1>
-                            <h1>MY PROFILE!</h1>
+                    <div class="content_typewriter">
+                        <div class="typewriter">
+                            <p>Welcome To My PortFolio</p>
                         </div>
 
-                        <ul class="info_list_inner">
-                            <li>ABOUT ME</li>
-                            <li>EDUCATION</li>
-                            <li>CONTACT</li>
-                        </ul>
-                    </div>
+                        <div class="typewriter_text">
+                            <p class="typewriter_p">Yang Sung Su</p>
 
-                    <div class="popup about">
-                        <h2>ABOUT ME</h2>
-                        <p>NAME : 양성수(Yang Sung Su)</p>
-                        <p>Birth : 1994.08.26</p>
-                        <p>Address : 시흥시 정왕동</p>
-
-                    </div>
-
-                    <div class="popup education">
-                        <h2>EDUCATION</h2>
-                        <p>연성대학교 사회복지과 입학 <span>2013</span></p>
-                        <p>15사단 입대<span>2015</span></p>
-                        <p>전 역<span>2016</span></p>
-                        <p>연성대학교 졸업<span>2018</span></p>
-                        <p>MCT(머시닝센터)<span>2022</span></p>
-                        <p>라인 컴퓨터 아트 학원<span>2022</span></p>
-                    </div>
-
-                    <div class="popup contact">
-                        <h2>CONTACT</h2>
-                        <p>Phone Number : 010-2332-5691</p>
-                        <p>E-Mail : rc5691@naver.com</p>
-                        <p>GitHube : https://github.com/Yangsungsu94</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section section_3">
-                <div id="drag-container">
-                    <div id="spin-container">
-                        <img src="img/html5.svg" alt="html">
-                        <img src="img/css3.svg" alt="css">
-                        <img src="img/javascript.svg" alt="js">
-                        <img src="img/jquery2.svg" alt="jquery">
-                        <img src="img/sass.svg" alt="sass">
-                        <img src="img/react.svg" alt="react">
-                        <img src="img/photo.svg" alt="photoshop">
-                        <img src="img/illustrator.svg" alt="illustrator">
-                        <img src="img/github.svg" alt="github">
-
-                        <p>Possible Language</p>
-                    </div>
-
-                    <div id="ground"></div>
-                </div>
-
-                <div id="music-container"></div>
-
-                <style>
-                    .github-corner:hover .octo-arm {
-                        animation: octocat-wave 560ms ease-in-out
-                    }
-
-                    @keyframes octocat-wave {
-
-                        0%,
-                        100% {
-                            transform: rotate(0)
-                        }
-
-                        20%,
-                        60% {
-                            transform: rotate(-25deg)
-                        }
-
-                        40%,
-                        80% {
-                            transform: rotate(10deg)
-                        }
-                    }
-
-                    @media (max-width:500px) {
-                        .github-corner:hover .octo-arm {
-                            animation: none
-                        }
-
-                        .github-corner .octo-arm {
-                            animation: octocat-wave 560ms ease-in-out
-                        }
-                    }
-                </style>
-            </section>
-
-            <section class="section section_5">
-                <div class='cards'>
-                    <div class='card card1' data-card>
-                        <div class='card__inner'>
-                            <div class='card__image'>
-                                <img src="img/slide1-1.jpg" alt="slide">
+                            <div class="login-box">
+                                <a href="https://github.com/Yangsungsu94?tab=repositories" target="_blank">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    My Git
+                                </a>
                             </div>
                         </div>
                     </div>
+                </section>
+            </div>
 
-                    <div class='card card2' data-card>
-                        <div class='card__inner'>
-                            <div class='card__image'>
-                                <img src="img/slide2-2.jpg" alt="slide">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class='card card3' data-card>
-                        <div class='card__inner'>
-                            <div class='card__image'>
+            <div class="swiper-slide" id="section-5">
+                <section class="section section_5">
+                    <div class='cards'>
+                        <div class='card card1' data-card>
+                            <div class='card__inner'>
                                 <div class='card__image'>
-                                    <img src="img/slide3.jpg" alt="slide">
+                                    <img src="img/slide1-1.jpg" alt="slide">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class='card card2' data-card>
+                            <div class='card__inner'>
+                                <div class='card__image'>
+                                    <img src="img/slide2-2.jpg" alt="slide">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class='card card3' data-card>
+                            <div class='card__inner'>
+                                <div class='card__image'>
+                                    <div class='card__image'>
+                                        <img src="img/slide3.jpg" alt="slide">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class='card card4' data-card>
+                            <div class='card__inner'>
+                                <div class='card__image'>
+                                    <img src="img/slide4-4.jpg" alt="slide">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class='card card5' data-card>
+                            <div class='card__inner'>
+                                <div class='card__image'>
+                                    <img src="img/slide5-5-5.jpg" alt="slide">
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class='card card4' data-card>
-                        <div class='card__inner'>
-                            <div class='card__image'>
-                                <img src="img/slide4-4.jpg" alt="slide">
+                    <div class='content'>
+                        <div class='content__group'>
+
+                            <p class='content__heading'>Pajamas</p>
+
+                            <div class="frame">
+                                <button class="custom-btn btn-9">Web Page</button>
+                                <button class="custom-btn btn-9">Document</button>
                             </div>
-                        </div>
-                    </div>
 
-                    <div class='card card5' data-card>
-                        <div class='card__inner'>
-                            <div class='card__image'>
-                                <img src="img/slide5-5-5.jpg" alt="slide">
+                            <p class='content__description'>
+                                <span>#React</span> <span>#Scss</span> <span>#반응형x</span>
+                            </p>
+
+                            <p class='content__description'>
+                                리엑트를 사용하여 홈페이지안에 라우터, 장바구니, 수량, 수량계산 등 기능들을
+                                좀 더 편리하게 적용시켰습니다
+                            </p>
+                        </div>
+
+                        <div class='content__group'>
+                            <p class='content__heading'>
+                                Library
+                            </p>
+
+                            <div class="frame">
+                                <button class="custom-btn btn-9">Web Page</button>
+                                <button class="custom-btn btn-9">Document</button>
                             </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class='content'>
-                    <div class='content__group'>
-                        <p class='content__heading'>Pajamas</p>
+                            <p class='content__description'>
+                                <span>#Html</span> <span>#Scss</span> <span>#Ajax</span>
 
-                        <div class="frame">
-                            <button class="custom-btn btn-9">Web Page</button>
-                            <button class="custom-btn btn-9">Document</button>
-                        </div>
+                            </p>
 
-                        <p class='content__description'>
-                            <span>#React</span> <span>#Scss</span>
-                        </p>
+                            <p class='content__description'>
+                                <span>#Javascript</span> <span>#Jquery</span> <span>#반응형X</span>
+                            </p>
 
-                        <p class='content__description'>
-                            리엑트를 사용하여 홈페이지안에 라우터, 장바구니, 수량, 수량계산 등 기능들을
-                            좀 더 편리하게 적용시켰습니다
-                        </p>
-                    </div>
-
-                    <div class='content__group'>
-                        <p class='content__heading'>
-                            Library
-                        </p>
-
-                        <div class="frame">
-                            <button class="custom-btn btn-9">Web Page</button>
-                            <button class="custom-btn btn-9">Document</button>
+                            <p class='content__description'>
+                                서점 홈페이지에 필요한 책의 내용들을 Ajax를 이용해<br>
+                                 데이터를 한번에 불러와 편하게 내용들을 넣었고,<br>
+                                내용이 긴 텍스트 내용들은<br>
+                                 메모장에 따로 적어 불러와 적용시켰습니다.
+                            </p>
                         </div>
 
-                        <p class='content__description'>
-                            <span>#Html</span> <span>#Scss</span> <span>#Ajax</span> <span>#Javascript</span>
-                            <span>#Jquery</span>
-                        </p>
+                        <div class='content__group'>
+                            <p class='content__heading'>
+                                Goobne Chicken
+                            </p>
 
-                        <p class='content__description'>
-                            서점 홈페이지에 필요한 책의 내용들을 Ajax를 이용해 데이터를 한번에 불러와 편하게 내용들을 넣었고,
-                            내용이 긴 텍스트 내용들은 메모장에 따로 적어 불러와 적용시켰습니다.
-                        </p>
-                    </div>
+                            <div class="frame">
+                                <button class="custom-btn btn-9">Web Page</button>
+                                <button class="custom-btn btn-9">Document</button>
+                            </div>
 
-                    <div class='content__group'>
-                        <p class='content__heading'>
-                            Goobne Chicken
-                        </p>
+                            <p class='content__description'>
+                                <span>#Html</span> <span>#Css3</span> <span>#Javascript</span>
+                            </p>
 
-                        <div class="frame">
-                            <button class="custom-btn btn-9">Web Page</button>
-                            <button class="custom-btn btn-9">Document</button>
+                            <p class='content__description'>
+                                <span>#Jquery</span><span>#반응형O</span>
+                            </p>
+
+                            <p class='content__description'>
+                                굽네치킨 홈페이지를 클론코딩으로 제작했습니다. <br>
+                                총 3명의 팀원과 협업하였으며 Header와Footer, 서브페이지를 도맡아 제작했습니다.
+                            </p>
                         </div>
 
-                        <p class='content__description'>
-                            <span>#Html</span> <span>#Css3</span> <span>#Javascript</span> <span>#Jquery</span>
-                        </p>
+                        <div class='content__group'>
+                            <p class='content__heading'>Abandoned Dog</p>
 
-                        <p class='content__description'>
-                            굽네치킨 홈페이지를 클론코딩으로 제작했습니다. <br>
-                            총 3명의 팀원과 협업하였으며, Header와Footer, 서브페이지를 도맡아 제작했습니다.
-                        </p>
-                    </div>
+                            <div class="frame">
+                                <button class="custom-btn btn-9">Web Page</button>
+                                <button class="custom-btn btn-9">Document</button>
+                            </div>
 
-                    <div class='content__group'>
-                        <p class='content__heading'>Abandoned Dog</p>
+                            <p class='content__description'>
+                                <span>#Html</span> <span>#Css3</span> <span>#Javascript</span>
+                            </p>
 
-                        <div class="frame">
-                            <button class="custom-btn btn-9">Web Page</button>
-                            <button class="custom-btn btn-9">Document</button>
+                            <p class='content__description'>
+                                <span>#Jquery</span><span>#반응형O</span>
+                            </p>
+
+                            <p class='content__description'>
+                                최근 Pet Shop이 아닌 유기견을 입양하자는 추세가 증가하고 있습니다. <br>
+                                사람들이 많이 이용하는 유기견 봉사소 홈페이지를 만들어 보았고, <br>
+                                홈페이지에서 많이 쓰이는
+                                 더보기와 자동슬라이더를 구현했습니다.
+                            </p>
                         </div>
 
-                        <p class='content__description'>
-                            <span>#Html</span> <span>#Css3</span> <span>#Javascript</span> <span>#Jquery</span>
-                        </p>
+                        <div class='content__group'>
+                            <p class='content__heading'>Speed Pc</p>
 
-                        <p class='content__description'>
-                            최근 Pet Shop이 아닌 유기견을 입양하자는 추세가 증가하고 있습니다. <br>
-                            사람들이 많이 이용하는 유기견 봉사소 홈페이지를 만들어 보았고, <br>
-                            홈페이지에서 많이 쓰이는 더보기와 자동슬라이더를 구현했습니다.
-                        </p>
+                            <div class="frame">
+                                <button class="custom-btn btn-9">Web Page</button>
+                                <button class="custom-btn btn-9">Document</button>
+                            </div>
+
+                            <p class='content__description'>
+                                <span>#Html</span> <span>#Css3</span> <span>#Javascript</span>
+                            </p>
+
+                            <p class='content__description'>
+                                <span>#반응형X</span>
+                            </p>
+                            <p class='content__description'>
+                                PC구매를 위한 컴퓨터판매 홈페이지를 만들었습니다. <br>
+                                제일 처음으로 만든 홈페이지이고, Speed Pc라는 가상의 조립형 컴퓨터 사이트를 제작했습니다.
+                            </p>
+                        </div>
                     </div>
+                </section>
+            </div>
 
-                    <div class='content__group'>
-                        <p class='content__heading'>Speed Pc</p>
+            <div class="swiper-slide" id="section_3">
+                <section class="section section_3">
+                    <div id="drag-container">
+                        <div id="spin-container">
+                            <img src="img/html5.svg" alt="html">
+                            <img src="img/css3.svg" alt="css">
+                            <img src="img/javascript.svg" alt="js">
+                            <img src="img/jquery2.svg" alt="jquery">
+                            <img src="img/sass.svg" alt="sass">
+                            <img src="img/react.svg" alt="react">
+                            <img src="img/photo.svg" alt="photoshop">
+                            <img src="img/illustrator.svg" alt="illustrator">
+                            <img src="img/github.svg" alt="github">
 
-                        <div class="frame">
-                            <button class="custom-btn btn-9">Web Page</button>
-                            <button class="custom-btn btn-9">Document</button>
+                            <p>Possible</p>
                         </div>
 
-                        <p class='content__description'>
-                            <span>#Html</span> <span>#Css3</span> <span>#Javascript</span>
-                        </p>
-
-                        <p class='content__description'>
-                            PC구매를 위한 컴퓨터판매 홈페이지를 만들었습니다. <br>
-                            제일 처음으로 만든 홈페이지이고, Speed Pc라는 가상의 조립형 컴퓨터 사이트를 제작했습니다.
-                        </p>
+                        <div id="ground"></div>
                     </div>
-                </div>
-            </section>
-        </div>
-    </div>
 
+                    <div id="music-container"></div>
 
-
-
-
-    <!-- 배경 파티클 -->
-    <script>
-        particlesJS("particles-js", {
-            "particles": {
-                "number": {
-                    "value": 355,
-                    "density": {
-                        "enable": true,
-                        "value_area": 789.1476416322727
-                    }
-                },
-                "color": {
-                    "value": "#ffffff"
-                },
-                "shape": {
-                    "type": "circle",
-                    "stroke": {
-                        "width": 0,
-                        "color": "#000000"
-                    },
-                    "polygon": {
-                        "nb_sides": 5
-                    },
-                    "image": {
-                        "src": "img/github.svg",
-                        "width": 100,
-                        "height": 100
-                    }
-                },
-                "opacity": {
-                    "value": 0.48927153781200905,
-                    "random": false,
-                    "anim": {
-                        "enable": true,
-                        "speed": 0.2,
-                        "opacity_min": 0,
-                        "sync": false
-                    }
-                },
-                "size": {
-                    "value": 2,
-                    "random": true,
-                    "anim": {
-                        "enable": true,
-                        "speed": 2,
-                        "size_min": 0,
-                        "sync": false
-                    }
-                },
-                "line_linked": {
-                    "enable": false,
-                    "distance": 150,
-                    "color": "#ffffff",
-                    "opacity": 0.4,
-                    "width": 1
-                },
-                "move": {
-                    "enable": true,
-                    "speed": 0.2,
-                    "direction": "none",
-                    "random": true,
-                    "straight": false,
-                    "out_mode": "out",
-                    "bounce": false,
-                    "attract": {
-                        "enable": false,
-                        "rotateX": 600,
-                        "rotateY": 1200
-                    }
-                }
-            },
-            "interactivity": {
-                "detect_on": "canvas",
-                "events": {
-                    "onhover": {
-                        "enable": true,
-                        "mode": "bubble"
-                    },
-                    "onclick": {
-                        "enable": true,
-                        "mode": "push"
-                    },
-                    "resize": true
-                },
-                "modes": {
-                    "grab": {
-                        "distance": 400,
-                        "line_linked": {
-                            "opacity": 1
+                    <style>
+                        .github-corner:hover .octo-arm {
+                            animation: octocat-wave 560ms ease-in-out
                         }
-                    },
-                    "bubble": {
-                        "distance": 83.91608391608392,
-                        "size": 1,
-                        "duration": 3,
-                        "opacity": 1,
-                        "speed": 3
-                    },
-                    "repulse": {
-                        "distance": 200,
-                        "duration": 0.4
-                    },
-                    "push": {
-                        "particles_nb": 4
-                    },
-                    "remove": {
-                        "particles_nb": 2
-                    }
-                }
-            },
-            "retina_detect": true
-        });
-    </script>
-    <!-- 배경파티클 끝 -->
+
+                        @keyframes octocat-wave {
+
+                            0%,
+                            100% {
+                                transform: rotate(0)
+                            }
+
+                            20%,
+                            60% {
+                                transform: rotate(-25deg)
+                            }
+
+                            40%,
+                            80% {
+                                transform: rotate(10deg)
+                            }
+                        }
+
+                        @media (max-width:500px) {
+                            .github-corner:hover .octo-arm {
+                                animation: none
+                            }
+
+                            .github-corner .octo-arm {
+                                animation: octocat-wave 560ms ease-in-out
+                            }
+                        }
+                    </style>
+                </section>
+            </div>
+
+            <div class="swiper-slide" id="section_2">
+                <section class="section section_2">
+
+                    <div class="section_2_inner">
+
+                        <div class="profile_img">
+                            <img src="img/profile.png" alt="profile">
+                        </div>
+
+                        <div class="info_list">
+                            <div class="info_opening">
+                                <h1>HELLO?</h1>
+                                <h1>MY PROFILE!</h1>
+                            </div>
+
+                            <ul class="info_list_inner">
+                                <li>ABOUT ME</li>
+                                <li>EDUCATION</li>
+                                <li>CONTACT</li>
+                            </ul>
+                        </div>
+
+                        <div class="popup about">
+                            <h2>ABOUT ME</h2>
+                            <p>NAME : 양성수(Yang Sung Su)</p>
+                            <p>Birth : 1994.08.26</p>
+                            <p>Address : 시흥시 정왕동</p>
+                        </div>
+
+                        <div class="popup education">
+                            <h2>EDUCATION</h2>
+                            <p>연성대학교 사회복지과 입학 <span>2013</span></p>
+                            <p>15사단 입대<span>2015</span></p>
+                            <p>전 역<span>2016</span></p>
+                            <p>연성대학교 졸업<span>2018</span></p>
+                            <p>MCT(머시닝센터)<span>2022</span></p>
+                            <p>라인 컴퓨터 아트 학원<span>2022</span></p>
+                        </div>
+
+                        <div class="popup contact">
+                            <h2>CONTACT</h2>
+                            <p>Phone Number : 010-2332-5691</p>
+                            <p>E-Mail : rc5691@naver.com</p>
+                            <p>GitHube : https://github.com/Yangsungsu94</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+    </div>
 
     <!-- scroll event -->
     <script>
-        const blocks = document.querySelectorAll(".section"),
+          const blocks = document.querySelectorAll(".section"),
             block = document.querySelector("section"),
             sectionHeight = parseFloat(window.getComputedStyle(block).height),
             links = document.querySelectorAll(".link"),
@@ -505,31 +431,9 @@
             });
         };
     </script>
-    <!-- scroll event end-->
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
-    <!-- Initialize Swiper -->
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            effect: "coverflow",
-            grabCursor: true,
-            centeredSlides: true,
-            slidesPerView: "auto",
-            coverflowEffect: {
-                rotate: 50,
-                stretch: 0,
-                depth: 100,
-                modifier: 1,
-                slideShadows: true,
-            },
-            pagination: {
-                el: ".swiper-pagination",
-            },
-        });
-
-    </script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.6.1/jquery.lettering.min.js"></script>
     <script src="js/index.js"></script>
 </body>
 

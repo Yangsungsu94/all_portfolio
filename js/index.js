@@ -1,68 +1,110 @@
-// scroll top0
-
-// window.onload=function(){
-//   setTimeout(function(){
-//     scrollTo(0,0);
-//   },100);
-// }
-
-// end
-
-// swiper
-var swiper = new Swiper(".mySwiper", {
-  effect: "coverflow",
-  grabCursor: true,
-  centeredSlides: true,
-  slidesPerView: "auto",
-  coverflowEffect: {
-    rotate: 50,
-    stretch: 0,
-    depth: 100,
-    modifier: 1,
-    slideShadows: true,
+// 파티클
+particlesJS("particles-js", {
+  particles: {
+    number: { value: 160, density: { enable: true, value_area: 800 } },
+    color: { value: "#ffffff" },
+    shape: {
+      type: "circle",
+      stroke: { width: 0, color: "#000000" },
+      polygon: { nb_sides: 5 },
+      image: { src: "img/github.svg", width: 100, height: 100 }
+    },
+    opacity: {
+      value: 1,
+      random: true,
+      anim: { enable: true, speed: 1, opacity_min: 0, sync: false }
+    },
+    size: {
+      value: 3,
+      random: true,
+      anim: { enable: false, speed: 4, size_min: 0.3, sync: false }
+    },
+    line_linked: {
+      enable: false,
+      distance: 150,
+      color: "#ffffff",
+      opacity: 0.4,
+      width: 1
+    },
+    move: {
+      enable: true,
+      speed: 1,
+      direction: "none",
+      random: true,
+      straight: false,
+      out_mode: "out",
+      bounce: false,
+      attract: { enable: false, rotateX: 600, rotateY: 600 }
+    }
   },
+  interactivity: {
+    detect_on: "canvas",
+    events: {
+      onhover: { enable: true, mode: "bubble" },
+      onclick: { enable: true, mode: "repulse" },
+      resize: true
+    },
+    modes: {
+      grab: { distance: 400, line_linked: { opacity: 1 } },
+      bubble: { distance: 250, size: 1, duration: 2, opacity: 0.2, speed: 3 },
+      repulse: { distance: 400, duration: 0.4 },
+      push: { particles_nb: 4 },
+      remove: { particles_nb: 2 }
+    }
+  },
+  retina_detect: true
+});
+
+// 섹션이동
+var swiper = new Swiper(".mySwiper", {
+  direction: "vertical",
+  slidesPerView: 1,
+  spaceBetween: 30,
+  mousewheel: true,
   pagination: {
     el: ".swiper-pagination",
+    clickable: true,
   },
+  on: {
+    slideChange:function(){
+      var sectionIndex= this.activeIndex;
+      if( sectionIndex==1 ){
+        $(".swiper-wrapper10").css({"z-index": "3"});
+        $(".rocket").css({opacity:0, transition:'all 1.5s'});
+      }else {
+        $(".swiper-wrapper10").css({"z-index": "1"});
+        $(".rocket").css({opacity:1, transition:'all 1.5s'});
+      }
+      if( sectionIndex==0 ){
+        $(".swiper-pagination").css({opacity:0, transition : 'all 1s'});
+
+      }else {
+        $(".swiper-pagination").css({opacity:1, transition : 'all 1s'});
+      }
+    }
+  }
 });
-//end
 
-// ainmation up down
+// 프로젝트
 
-// img rotate
-
-$(function () {
-  $(".swiper-slide").hover(function () {
+// animation top bottom
+$(function(){
+  $(".card").hover(function(){
     $(this).css("animation-play-state", "paused").siblings().css("animation", "motion 0.7s linear 0s infinite alternate");
-    $(this).find(".slide_img_hover").css("opacity", "0");
-    $(this).find(".slide_img_hover_p").css("display", "none");
-
-  }, function () {
-    $(this).css("animation", "motion 0.7s linear 0s infinite alternate");
-    $(this).find(".slide_img_hover").css("opacity", "0.9");
-    $(this).find(".slide_img_hover_p").css("display", "block");
+  },function(){
+    $(this).css("animation", "motion 1s linear 0s infinite alternate");
   })
 })
+//end
 
-// end
-
+//img 360rotate
 var radius = 240; // how big of the radius
 var autoRotate = true; // auto rotate or not
 var rotateSpeed = -60; // unit: seconds/360 degrees
 var imgWidth = 120; // width of images (unit: px)
 var imgHeight = 170; // height of images (unit: px)
-
-
 var bgMusicURL = 'https://api.soundcloud.com/tracks/143041228/stream?client_id=587aa2d384f7333a886010d5f52f302a';
 var bgMusicControls = true;
-/*
-     NOTE:
-       + imgWidth, imgHeight will work for video
-       + if imgWidth, imgHeight too small, play/pause button in <video> will be hidden
-       + Music link are taken from: https://hoangtran0410.github.io/Visualyze-design-your-own-/?theme=HauMaster&playlist=1&song=1&background=28
-       + Custom from code in tiktok video  https://www.facebook.com/J2TEAM.ManhTuan/videos/1353367338135935/
-*/
-
 // ===================== start =======================
 // animation start after 1000 miliseconds
 setTimeout(init, 1000);
@@ -113,8 +155,7 @@ if (autoRotate) {
   var animationName = (rotateSpeed > 0 ? 'spin' : 'spinRevert');
   ospin.style.animation = `${animationName} ${Math.abs(rotateSpeed)}s infinite linear`;
 }
-
-
+//end
 
 // setup events
 document.onpointerdown = function (e) {
@@ -151,7 +192,6 @@ document.onpointerdown = function (e) {
     }, 17);
     this.onpointermove = this.onpointerup = null;
   };
-
   return false;
 };
 
@@ -192,13 +232,13 @@ $(".info_list_inner li").hover(function () {
 // popup이 마우스를 따라 이동하는 효과
 document.addEventListener("mousemove", e => {
   gsap.to(".popup", {
-    x: e.clientX - 1150,
-    y: e.clientY - 400
+    x: e.clientX - 1300,
+    y: e.clientY - 550
   })
 })
 //end
 
-// 내가 원하던거
+//portfolio slide
 gsap.registerPlugin(Flip);
 
 // Variables
@@ -271,28 +311,9 @@ $(function () {
     } else{      
       $(".header").show();
       count--;  
-
     }
   })
-
 })
 
-
-// $(function(){
-//   var opacity_group=(".content__group").css("opacity");
-//   $(".card").click(function(){
-//     if(opacity_group===1){
-//       $(".header").hide();
-//     }else{
-//       $(".header").show();
-//     }
-//   })
-// })
-// end
-
-// scroll fade
-
-
-//end
 
 
