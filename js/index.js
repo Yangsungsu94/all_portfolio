@@ -192,8 +192,8 @@ $(".info_list_inner li").hover(function () {
 // popup이 마우스를 따라 이동하는 효과
 document.addEventListener("mousemove", e => {
   gsap.to(".popup", {
-      x: e.clientX -1150,
-      y: e.clientY -400
+    x: e.clientX - 1150,
+    y: e.clientY - 400
   })
 })
 //end
@@ -257,12 +257,42 @@ cards.forEach((card, idx) => {
 
 // end
 
-// img hover
+// card click header none
+
+$(function () {
+  let count=0;
+
+  $(".card").off("click").on("click",function () {     
+
+    if(count==0){ 
+      $(".header").hide();
+      count++;  
+
+    } else{      
+      $(".header").show();
+      count--;  
+
+    }
+  })
+
+})
 
 
-
+// $(function(){
+//   var opacity_group=(".content__group").css("opacity");
+//   $(".card").click(function(){
+//     if(opacity_group===1){
+//       $(".header").hide();
+//     }else{
+//       $(".header").show();
+//     }
+//   })
+// })
 // end
 
+// scroll fade
 
+
+//end
 
 

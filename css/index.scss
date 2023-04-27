@@ -124,6 +124,7 @@ canvas {
     }
 
     .section_1 {
+     
 
       .content_typewriter {
         display: flex;
@@ -194,6 +195,7 @@ canvas {
 
     .section_2 {
       position: relative;
+      // transform: translateY(100px); transition: all 2s; opacity: 0;
 
       .section_2_inner {
         display: flex;
@@ -294,6 +296,7 @@ canvas {
     }
 
     .section_5 {
+     
 
       ::-moz-selection {
         background: var(--selection-color);
@@ -532,6 +535,9 @@ canvas {
 
 // img rotate
 
+.section_3{
+ 
+
 #drag-container,
 #spin-container {
   position: relative;
@@ -644,6 +650,7 @@ canvas {
     -webkit-transform: rotateY(0deg);
     transform: rotateY(0deg);
   }
+}
 }
 
 // end
