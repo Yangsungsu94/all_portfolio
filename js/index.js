@@ -55,44 +55,44 @@ particlesJS("particles-js", {
   retina_detect: true
 });
 
+// end
+
 // 섹션이동
+var menu = ['HOME', 'PORTFOLIO', 'SKILL', 'PROFILE']
+
 var swiper = new Swiper(".mySwiper", {
   direction: "vertical",
+  touchRatio: 0,
   slidesPerView: 1,
   spaceBetween: 30,
   mousewheel: true,
+  speed:900,
+
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '">' + (menu[index]) + '</span>';
+    },
   },
-  on: {
-    slideChange:function(){
-      var sectionIndex= this.activeIndex;
-      if( sectionIndex==1 ){
-        $(".swiper-wrapper10").css({"z-index": "3"});
-        $(".rocket").css({opacity:0, transition:'all 1.5s'});
-      }else {
-        $(".swiper-wrapper10").css({"z-index": "1"});
-        $(".rocket").css({opacity:1, transition:'all 1.5s'});
-      }
-      if( sectionIndex==0 ){
-        $(".swiper-pagination").css({opacity:0, transition : 'all 1s'});
 
-      }else {
-        $(".swiper-pagination").css({opacity:1, transition : 'all 1s'});
-      }
+  on: {
+    slideChange: function () {
+      console.log("");    
     }
   }
 });
 
+
+
 // 프로젝트
 
 // animation top bottom
-$(function(){
-  $(".card").hover(function(){
-    $(this).css("animation-play-state", "paused").siblings().css("animation", "motion 0.7s linear 0s infinite alternate");
-  },function(){
-    $(this).css("animation", "motion 1s linear 0s infinite alternate");
+$(function () {
+  $(".card__inner").hover(function () {
+    $(this).css("animation-play-state", "paused").siblings().css("animation", "motion 1.5s linear 0s infinite alternate");
+  }, function () {
+    $(this).css("animation", "motion 1.5s linear 0s infinite alternate");
   })
 })
 //end
@@ -300,17 +300,17 @@ cards.forEach((card, idx) => {
 // card click header none
 
 $(function () {
-  let count=0;
+  let count = 0;
 
-  $(".card").off("click").on("click",function () {     
+  $(".card").off("click").on("click", function () {
 
-    if(count==0){ 
+    if (count == 0) {
       $(".header").hide();
-      count++;  
+      count++;
 
-    } else{      
+    } else {
       $(".header").show();
-      count--;  
+      count--;
     }
   })
 })

@@ -59,7 +59,6 @@ canvas {
 }
 
 .swiper-slide {
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -73,20 +72,34 @@ canvas {
   // object-fit: cover;
 }
 
+.swiper-pagination-bullets{
+  transform: translate3d(0px,0%,0) !important;
+}
+
+.on{
+  opacity: 1;
+}
+
 .swiper-pagination {
-  margin-right: 60px;
-  opacity: 0;
 
   .swiper-pagination-bullet {
-    margin: 30px 0 !important;
-    width: 20px;
-    height: 20px;
-    cursor: url(../img/cur.png) 64 64, auto !important;
-    background-color: #fff;
 
-    &:active {
-      cursor: url(../img/cur_on.png) 50 50, auto !important;
+    // cursor: url(../img/cur.png) 64 64, auto !important;
+    background-color: transparent; 
+    width: auto;
+    height: 30px;
+    text-align: center;
+    font-size: 2rem;
+    color:#000;
+    opacity: 0.5;
+
+    &:hover{
+      opacity: 1;
     }
+    
+    // &:active {
+    //   cursor: url(../img/cur_on.png) 50 50, auto !important;
+    // }
   }
 }
 
@@ -134,7 +147,6 @@ canvas {
         margin-top: 25rem;
 
         .typewriter_p {
-
           color: #fff;
           font-size: 4rem;
           line-height: 7rem;
@@ -145,7 +157,7 @@ canvas {
 
         0%,
         100% {
-          border-color: #212121;
+          border-color: #232741;
         }
       }
 
@@ -314,13 +326,12 @@ canvas {
       cursor: pointer;
       flex: 0 0 auto;
       margin: 10px;
-      animation:motion 1s linear 0s infinite alternate;
-      margin-top: 0;
+     
     }
 
     @keyframes motion{
       0%{margin-top:0px;}
-      100%{margin-top: 10px;}
+      100%{margin-top: 20px;}
     }
 
     .card__inner {
@@ -330,6 +341,8 @@ canvas {
       border-radius: 8px;
       overflow: hidden;
       position: relative;
+      animation:motion 1.5s linear 0s infinite alternate;
+      margin-top: 0;
     }
 
     .card__image {
@@ -462,7 +475,7 @@ canvas {
 .container2 {
   font-family: 'Jeju Gothic', sans-serif;
   margin: 0 auto;
-  padding: 4rem 10rem;
+  padding: 3.2rem 10rem;
   text-align: center;
 }
 
@@ -470,12 +483,12 @@ canvas {
   width: 100%;
   height: 10vh;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
-  position: fixed;
-  top: 0;
-  // left: 0;
-  background-color: gray;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  background-color: #fff;
   opacity: 0.7;
   z-index: 9999;
 
@@ -704,12 +717,12 @@ canvas {
   display: inline-block;
   padding: 1.5rem 3.5rem;
   color: #03e9f4;
-  font-size: 16px;
+  font-size: 2rem;
   text-decoration: none;
   text-transform: uppercase;
   overflow: hidden;
   transition: .5s;
-  margin-top: 40px;
+  margin-top: 1rem;
   letter-spacing: 4px;
 
 }
