@@ -72,38 +72,35 @@ canvas {
   // object-fit: cover;
 }
 
-.swiper-pagination-bullets{
-  transform: translate3d(0px,0%,0) !important;
-
-
+.swiper-pagination-bullets {
+  transform: translate3d(0px, 0%, 0) !important;
 }
 
-.on{
-  opacity: 1;
-  color:#242424;
-}
+
 
 .swiper-pagination {
 
   .swiper-pagination-bullet {
 
     // cursor: url(../img/cur.png) 64 64, auto !important;
-    background-color: transparent; 
+    background-color: transparent;
     width: auto;
     height: 30px;
     text-align: center;
     font-size: 2rem;
-    color:#000;
+    font-weight: bold;
+    color: #000;
     opacity: 0.5;
 
-    &:hover{
+    &:hover {
       opacity: 1;
     }
 
-    &:first-child{
+    &.on {
       opacity: 1;
+      color: #242424;
     }
-    
+
     // &:active {
     //   cursor: url(../img/cur_on.png) 50 50, auto !important;
     // }
@@ -333,12 +330,17 @@ canvas {
       cursor: pointer;
       flex: 0 0 auto;
       margin: 10px;
-     
+
     }
 
-    @keyframes motion{
-      0%{margin-top:0px;}
-      100%{margin-top: 20px;}
+    @keyframes motion {
+      0% {
+        margin-top: 0px;
+      }
+
+      100% {
+        margin-top: 20px;
+      }
     }
 
     .card__inner {
@@ -348,7 +350,7 @@ canvas {
       border-radius: 8px;
       overflow: hidden;
       position: relative;
-      animation:motion 1.5s linear 0s infinite alternate;
+      // animation:motion 1.5s linear 0s infinite alternate;
       margin-top: 0;
     }
 
@@ -433,7 +435,7 @@ canvas {
 
     .content__heading {
       font-size: 42px;
-      color:#242424;
+      color: #242424;
       margin-bottom: 1rem;
       white-space: nowrap;
     }
@@ -461,7 +463,7 @@ canvas {
       color: #888888;
       font-size: 1.5rem;
       line-height: 2.3rem;
-      width:650px;
+      width: 650px;
 
       span {
         font-size: 2rem;
@@ -845,7 +847,8 @@ canvas {
 }
 
 .frame {
-  width:650px;
+  width: 650px;
+
   button {
     margin-top: 2rem;
 
@@ -911,6 +914,8 @@ canvas {
 }
 
 // end
+
+
 
 
 

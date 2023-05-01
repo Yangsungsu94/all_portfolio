@@ -65,25 +65,22 @@ canvas {
   transform: translate3d(0px, 0%, 0) !important;
 }
 
-.on {
-  opacity: 1;
-  color: #242424;
-}
-
 .swiper-pagination .swiper-pagination-bullet {
   background-color: transparent;
   width: auto;
   height: 30px;
   text-align: center;
   font-size: 2rem;
+  font-weight: bold;
   color: #000;
   opacity: 0.5;
 }
 .swiper-pagination .swiper-pagination-bullet:hover {
   opacity: 1;
 }
-.swiper-pagination .swiper-pagination-bullet:first-child {
+.swiper-pagination .swiper-pagination-bullet.on {
   opacity: 1;
+  color: #242424;
 }
 
 .swiper-wrapper {
@@ -279,7 +276,6 @@ canvas {
   border-radius: 8px;
   overflow: hidden;
   position: relative;
-  animation: motion 1.5s linear 0s infinite alternate;
   margin-top: 0;
 }
 .swiper-wrapper .section_5 .card__image {

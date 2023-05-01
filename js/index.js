@@ -59,14 +59,14 @@ particlesJS("particles-js", {
 
 // 섹션이동
 var menu = ['HOME', 'PORTFOLIO', 'SKILL', 'PROFILE']
-
+var menu_in = menu.index;
 var swiper = new Swiper(".mySwiper", {
   direction: "vertical",
   touchRatio: 0,
   slidesPerView: 1,
   spaceBetween: 30,
   mousewheel: true,
-  speed:900,
+  speed: 900,
 
   pagination: {
     el: ".swiper-pagination",
@@ -77,8 +77,13 @@ var swiper = new Swiper(".mySwiper", {
   },
 
   on: {
+    init: function () {
+      $(".swiper-pagination-bullet-active").addClass("on");
+    },
+
     slideChange: function () {
-      
+      $(".swiper-pagination-bullet").removeClass("on");
+      $(".swiper-pagination-bullet-active").addClass("on");
     }
   }
 });
@@ -86,15 +91,15 @@ var swiper = new Swiper(".mySwiper", {
 // 프로젝트
 
 // card animation
-$(function () {
-  $(".card__inner").hover(function () {
-    $(this).css("animation-play-state", "paused").siblings().css("animation", "motion 1.5s linear 0s infinite alternate").click(function(){
+// $(function () {
+//   $(".card__inner").hover(function () {
+//     $(this).css("animation-play-state", "paused").siblings().css("animation", "motion 1.5s linear 0s infinite alternate").click(function(){
 
-    });
-  }, function () {
-    $(this).css("animation", "motion 1.5s linear 0s infinite alternate");
-  })
-});
+//     });
+//   }, function () {
+//     $(this).css("animation", "motion 1.5s linear 0s infinite alternate");
+//   })
+// });
 //end
 
 // $(function(){
@@ -286,8 +291,8 @@ const updateCard = (card, idx, active) => {
     ease: "expo.out",
     stagger: 0.1,
     alpha: active ? 1 : 0,
-    width : active ? "50%" : 0,
-    height : active ? "auto" : 0,
+    width: active ? "50%" : 0,
+    height: active ? "auto" : 0,
     y: active ? 0 : 20,
     delay: active ? 0.4 : 0
   });
@@ -311,21 +316,9 @@ const updateCard = (card, idx, active) => {
 cards.forEach((card, idx) => {
   updateCard(card, idx, false);
   card.addEventListener("click", (evt) => {
-    updateCard(card, idx, !card.classList.contains(activeClass));    
+    updateCard(card, idx, !card.classList.contains(activeClass));
   });
 });
-
-// let btn=document.querySelector('.btn-9');
-// btn.addEventListener("click",(evt)=>{
-//   evt.stopPropagation();
-//   console.log("click");
-//   location.href="https://www.naver.com";
-// })
-
-// $('.btn9').click(function(event){
-//    event.stopPropagation();
-//    $(this).attr('href',"https://www.naver.com");
-// })
 
 // end
 
