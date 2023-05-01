@@ -67,6 +67,7 @@ canvas {
 
 .on {
   opacity: 1;
+  color: #242424;
 }
 
 .swiper-pagination .swiper-pagination-bullet {
@@ -79,6 +80,9 @@ canvas {
   opacity: 0.5;
 }
 .swiper-pagination .swiper-pagination-bullet:hover {
+  opacity: 1;
+}
+.swiper-pagination .swiper-pagination-bullet:first-child {
   opacity: 1;
 }
 
@@ -351,6 +355,7 @@ canvas {
   font-size: 42px;
   color: #242424;
   margin-bottom: 1rem;
+  white-space: nowrap;
 }
 @media (min-width: 768px) {
   .swiper-wrapper .section_5 .content__heading {
@@ -373,6 +378,7 @@ canvas {
   color: #888888;
   font-size: 1.5rem;
   line-height: 2.3rem;
+  width: 650px;
 }
 .swiper-wrapper .section_5 .content__description span {
   font-size: 2rem;
@@ -662,6 +668,9 @@ canvas {
   50%, 100% {
     bottom: 100%;
   }
+}
+.frame {
+  width: 650px;
 }
 .frame button {
   margin-top: 2rem;

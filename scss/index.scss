@@ -74,10 +74,13 @@ canvas {
 
 .swiper-pagination-bullets{
   transform: translate3d(0px,0%,0) !important;
+
+
 }
 
 .on{
   opacity: 1;
+  color:#242424;
 }
 
 .swiper-pagination {
@@ -94,6 +97,10 @@ canvas {
     opacity: 0.5;
 
     &:hover{
+      opacity: 1;
+    }
+
+    &:first-child{
       opacity: 1;
     }
     
@@ -428,6 +435,7 @@ canvas {
       font-size: 42px;
       color:#242424;
       margin-bottom: 1rem;
+      white-space: nowrap;
     }
 
     @media (min-width: 768px) {
@@ -453,6 +461,7 @@ canvas {
       color: #888888;
       font-size: 1.5rem;
       line-height: 2.3rem;
+      width:650px;
 
       span {
         font-size: 2rem;
@@ -836,7 +845,7 @@ canvas {
 }
 
 .frame {
-
+  width:650px;
   button {
     margin-top: 2rem;
 

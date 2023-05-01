@@ -78,24 +78,42 @@ var swiper = new Swiper(".mySwiper", {
 
   on: {
     slideChange: function () {
-      console.log("");    
+      
     }
   }
 });
 
-
-
 // 프로젝트
 
-// animation top bottom
+// card animation
 $(function () {
   $(".card__inner").hover(function () {
-    $(this).css("animation-play-state", "paused").siblings().css("animation", "motion 1.5s linear 0s infinite alternate");
+    $(this).css("animation-play-state", "paused").siblings().css("animation", "motion 1.5s linear 0s infinite alternate").click(function(){
+
+    });
   }, function () {
     $(this).css("animation", "motion 1.5s linear 0s infinite alternate");
   })
-})
+});
 //end
+
+// $(function(){
+//   $(".card__inner").mouseenter(function(){
+//     $(this).css("animation-play-state", "paused").siblings().css("animation", "motion 1.5s linear 0s infinite alternate");
+//     $(this).click(function(){
+//       $(this).css("animation-play-state", "paused");
+//     })
+//   })
+// });
+
+// $(function(){
+//   $(".card__inner").mouseleave(function(){
+//     $(this).css("animation", "motion 1.5s linear 0s infinite alternate");
+//     // $(this).click(function())
+//   })
+// });
+
+
 
 //img 360rotate
 var radius = 240; // how big of the radius
@@ -268,6 +286,8 @@ const updateCard = (card, idx, active) => {
     ease: "expo.out",
     stagger: 0.1,
     alpha: active ? 1 : 0,
+    width : active ? "50%" : 0,
+    height : active ? "auto" : 0,
     y: active ? 0 : 20,
     delay: active ? 0.4 : 0
   });
@@ -291,9 +311,21 @@ const updateCard = (card, idx, active) => {
 cards.forEach((card, idx) => {
   updateCard(card, idx, false);
   card.addEventListener("click", (evt) => {
-    updateCard(card, idx, !card.classList.contains(activeClass));
+    updateCard(card, idx, !card.classList.contains(activeClass));    
   });
 });
+
+// let btn=document.querySelector('.btn-9');
+// btn.addEventListener("click",(evt)=>{
+//   evt.stopPropagation();
+//   console.log("click");
+//   location.href="https://www.naver.com";
+// })
+
+// $('.btn9').click(function(event){
+//    event.stopPropagation();
+//    $(this).attr('href',"https://www.naver.com");
+// })
 
 // end
 
