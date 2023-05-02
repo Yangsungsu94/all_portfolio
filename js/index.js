@@ -255,8 +255,8 @@ $(".info_list_inner li").hover(function () {
 // popup이 마우스를 따라 이동하는 효과
 document.addEventListener("mousemove", e => {
   gsap.to(".popup", {
-    x: e.clientX - 1300,
-    y: e.clientY - 550
+    x: e.clientX - 1250,
+    y: e.clientY - 490
   })
 })
 //end
@@ -292,7 +292,7 @@ const updateCard = (card, idx, active) => {
     stagger: 0.1,
     alpha: active ? 1 : 0,
     width: active ? "50%" : 0,
-    height: active ? "auto" : 0,
+    height: active ? "100%" : 0,
     y: active ? 0 : 20,
     delay: active ? 0.4 : 0
   });
@@ -340,5 +340,12 @@ $(function () {
   })
 })
 
+// $(".card__image,.center").click(function(){
+//   $(".center").toggle(".toggle"); 
+// });
+
+$(".card__image").click(function(){
+  $(this).find(".center").toggle();
+});
 
 
