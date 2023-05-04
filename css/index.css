@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -151,6 +152,8 @@ canvas {
   width: 35rem;
   height: 35rem;
   background-color: #fff;
+  animation: motion 1s linear 0s infinite alternate;
+  margin-top: 0;
 }
 .swiper-wrapper .section_2 .section_2_inner .profile_img img {
   width: 100%;
@@ -199,10 +202,6 @@ canvas {
   font-size: 1.8rem;
   line-height: 2.6rem;
 }
-.swiper-wrapper .section_2 .section_2_inner .popup p span {
-  font-size: 1.8rem;
-  float: left;
-}
 .swiper-wrapper .section_2 .section_2_inner .about {
   width: 35rem;
 }
@@ -228,9 +227,18 @@ canvas {
 .swiper-wrapper .section_2 .section_2_inner .contact {
   width: 50rem;
 }
-.swiper-wrapper .section_2 .section_2_inner .contact p a {
-  color: #000 !important;
+.swiper-wrapper .section_2 .section_2_inner .contact p .i_img {
   font-size: 1.8rem;
+  vertical-align: middle;
+}
+.swiper-wrapper .section_2 .section_2_inner .contact p .i_image {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.swiper-wrapper .section_2 .section_2_inner .contact p .i_image img {
+  width: 100%;
 }
 .swiper-wrapper .section_5 ::-moz-selection {
   background: var(--selection-color);
@@ -287,7 +295,6 @@ canvas {
   background-color: white;
   overflow: hidden;
   position: relative;
-  margin-top: 0;
 }
 .swiper-wrapper .section_5 .card__image {
   overflow: hidden;
@@ -361,6 +368,7 @@ canvas {
   color: #242424;
   margin-bottom: 1rem;
   white-space: nowrap;
+  font-family: "Racing Sans One", "cursive";
 }
 @media (min-width: 768px) {
   .swiper-wrapper .section_5 .content__heading {
@@ -381,7 +389,7 @@ canvas {
 .swiper-wrapper .section_5 .content__description {
   margin-top: 4rem;
   color: #888888;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   line-height: 2.3rem;
   width: 650px;
 }

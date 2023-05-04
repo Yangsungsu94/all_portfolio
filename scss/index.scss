@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -75,8 +77,6 @@ canvas {
 .swiper-pagination-bullets {
   transform: translate3d(0px, 0%, 0) !important;
 }
-
-
 
 .swiper-pagination {
 
@@ -190,7 +190,8 @@ canvas {
         width: 35rem;
         height: 35rem;
         background-color: #fff;
-
+        animation:motion 1s linear 0s infinite alternate;
+        margin-top: 0;
         img {
           width: 100%;
         }
@@ -244,12 +245,7 @@ canvas {
 
         p {
           font-size: 1.8rem;
-          line-height: 2.6rem;
-
-          span {
-            font-size: 1.8rem;
-            float: left;
-          }
+          line-height: 2.6rem;         
         }
       }
 
@@ -269,24 +265,12 @@ canvas {
             font-size: 1.8rem;
             line-height: 2.5rem;
           }
-
-          // .p_left{
-          //   width:20rem;
-          //   text-align: center;
-          // }
-
+          
           .p_right {
             text-align: center;
             width: 47rem;
           }
         }
-
-
-
-        // p{
-        //   margin-left:2rem;
-
-        // } 
       }
 
       .technical {
@@ -296,10 +280,23 @@ canvas {
       .contact {
         width: 50rem;
 
-        p {
-          a {
-            color: #000 !important;
+        p {         
+
+          .i_img{
             font-size: 1.8rem;
+            vertical-align: middle;          
+
+          }
+          
+          .i_image{
+            width:30px;
+            height:30px;
+            display: inline-block;
+            vertical-align: middle;          
+
+            img{
+              width:100%;
+            }
           }
         }
       }
@@ -374,8 +371,7 @@ canvas {
       background-color: white;
       overflow: hidden;
       position: relative;
-      // animation:motion 1.5s linear 0s infinite alternate;
-      margin-top: 0;
+      
     }
 
     .card__image {
@@ -462,7 +458,8 @@ canvas {
       color: #242424;
       margin-bottom: 1rem;
       white-space: nowrap;
-    }
+      font-family: 'Racing Sans One', "cursive";
+      }
 
     @media (min-width: 768px) {
       .content__heading {
@@ -485,7 +482,7 @@ canvas {
     .content__description {
       margin-top: 4rem;
       color: #888888;
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       line-height: 2.3rem;
       width: 650px;
 
