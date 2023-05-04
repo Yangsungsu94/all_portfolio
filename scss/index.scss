@@ -116,6 +116,7 @@ canvas {
   .section_1 {
     position: relative;
 
+
     .content_typewriter {
       display: flex;
       justify-content: center;
@@ -179,7 +180,6 @@ canvas {
 
   .section_2 {
     position: relative;
-    // transform: translateY(100px); transition: all 2s; opacity: 0;
 
     .section_2_inner {
       display: flex;
@@ -305,7 +305,6 @@ canvas {
 
   .section_5 {
 
-
     ::-moz-selection {
       background: var(--selection-color);
       color: white;
@@ -323,7 +322,7 @@ canvas {
       width: 150px;
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
+      justify-content: center;   
     }
 
     @media (min-width: 768px) {

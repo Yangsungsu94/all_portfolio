@@ -338,14 +338,9 @@ $(function () {
       count--;
     }
   })
-})
-
-// $(".card__image,.center").click(function(){
-//   $(".center").toggle(".toggle"); 
-// });
-
-$(".card__image").click(function(){
-  $(this).find(".center").toggle();
 });
 
+$(".card__image").off("click").click(function () {
+  $(this).find(".center").toggle();
+});
 
