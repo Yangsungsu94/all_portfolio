@@ -840,4 +840,5 @@ button:hover {
 .btn-arrow:hover svg {
   opacity: 1;
   right: -2rem;
+}dow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5), -4px -4px 6px 0 rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.5), inset 4px 4px 6px 0 rgba(116, 125, 136, 0.3);
 }
